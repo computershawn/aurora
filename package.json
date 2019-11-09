@@ -113,7 +113,7 @@
     "jest-styled-components": "^6.3.3",
     "lint-staged": "^7.0.4",
     "pixo": "^1.1.0",
-    "prettier": "^1.12.1",
+    "prettier": "^1.19.1",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
