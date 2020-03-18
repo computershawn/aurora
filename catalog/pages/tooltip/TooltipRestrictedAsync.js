@@ -55,7 +55,7 @@ AsyncContent.defaultProps = {
   onLoad: () => {}
 };
 
-const seatMap = new Array(50).fill(1);
+const seatMap = new Array(34).fill(1);
 const seatMapStyle = {
   display: "inline-block",
   width: "20px",

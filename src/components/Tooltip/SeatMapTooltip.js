@@ -152,13 +152,17 @@ class SeatMapTooltip extends Component {
     const rightEdge = xPos + dimensions.width / 2;
     const leftEdge = xPos - dimensions.width / 2;
     const arrowSpace = ARROW_WIDTH / 2;
+    const borderRadius = parseInt(
+      constants.borderRadius.large.split("px")[0],
+      10
+    );
 
     let centerOffset = 0;
 
     if (leftEdge < leftBound) {
       centerOffset = (leftEdge - leftBound) * 1 + arrowSpace;
     } else if (rightEdge > rightBound) {
-      centerOffset = (rightEdge - rightBound) * 1 - arrowSpace;
+      centerOffset = (rightEdge - rightBound) * 1 - (arrowSpace - borderRadius);
     }
 
     this.setState({
