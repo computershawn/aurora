@@ -2,7 +2,7 @@
 import React from "react";
 import * as PropTypes from "prop-types";
 import styled from "styled-components";
-import Tooltip from "../../../src/components/Tooltip";
+import SeatMapTooltip from "../../../src/components/Tooltip/SeatMapTooltip";
 import { LinkCta } from "../../../src/components/Text";
 
 const Container = styled.div`
@@ -68,7 +68,10 @@ class TooltipRestrictedAsyncDemo extends React.Component {
   };
 
   showTooltip = (e, preferTop = false) => {
-    const position = Tooltip.getDimensionsFromEvent(e);
+    const position = {
+      x: 1000,
+      y: 100
+    };
 
     this.setState(state => ({ ...state, isOpened: true, position, preferTop }));
   };
@@ -107,7 +110,7 @@ class TooltipRestrictedAsyncDemo extends React.Component {
           </TooltipButton>
         </div>
 
-        <Tooltip
+        <SeatMapTooltip
           ref={this.tooltipRef}
           isVisible={isOpened}
           position={{ ...position }}
@@ -119,7 +122,7 @@ class TooltipRestrictedAsyncDemo extends React.Component {
           ) : (
             ""
           )}
-        </Tooltip>
+        </SeatMapTooltip>
       </Container>
     );
   }
