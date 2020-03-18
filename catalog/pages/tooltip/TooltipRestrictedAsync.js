@@ -68,12 +68,15 @@ class TooltipRestrictedAsyncDemo extends React.Component {
   };
 
   showTooltip = (e, preferTop = false) => {
+    const rect = e.target.getBoundingClientRect();
+
     const position = {
-      x: 1000,
-      y: 100
+      x: rect.x + rect.width / 2,
+      y: rect.y
     };
 
     this.setState(state => ({ ...state, isOpened: true, position, preferTop }));
+    this.tooltipRef.current.refresh();
   };
 
   tooltipRef = React.createRef();
@@ -116,6 +119,7 @@ class TooltipRestrictedAsyncDemo extends React.Component {
           position={{ ...position }}
           preferTop={preferTop}
           directionChanged={this.onDirectionChanged}
+          style={{ width: "260px" }}
         >
           {isOpened ? (
             <AsyncContent onLoad={() => this.tooltipRef.current.refresh()} />

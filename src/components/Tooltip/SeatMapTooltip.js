@@ -52,11 +52,6 @@ class SeatMapTooltip extends Component {
       spaceFromMouse
     });
 
-    const adjustment = this.adjustArrow({
-      coords: { x: result.x, width: dimensions.width },
-      position
-    });
-
     let direction = null;
 
     if (result.y < position.y + dimensions.windowScroll) {
@@ -69,17 +64,13 @@ class SeatMapTooltip extends Component {
       const { directionChanged } = props;
       const { actualDirection } = prevState;
 
-      if (
-        actualDirection !== direction ||
-        prevState.arrowAdjustment !== adjustment
-      ) {
+      if (actualDirection !== direction) {
         if (direction && directionChanged) {
           directionChanged(direction);
         }
 
         return {
-          actualDirection: direction || actualDirection,
-          arrowAdjustment: adjustment
+          actualDirection: direction || actualDirection
         };
       }
 
@@ -120,9 +111,8 @@ class SeatMapTooltip extends Component {
         return x - containerCenter;
       }
 
-      if (x + containerCenter > windowWidth - containerCenter) {
-        const overflow = x + containerCenter - windowWidth;
-        return x - overflow + ARROW_WIDTH / 2;
+      if (x + containerCenter > windowWidth) {
+        return windowWidth - width + ARROW_WIDTH / 2;
       }
 
       return x;
@@ -132,6 +122,8 @@ class SeatMapTooltip extends Component {
       !preferTop && bottomPosition + height < viewportBottom
         ? bottomPosition
         : topPositionWithFallback;
+
+    this.setArrowPosition(dimensions, getXPosition());
 
     return {
       x: getXPosition(),
@@ -150,6 +142,29 @@ class SeatMapTooltip extends Component {
     }
   };
 
+  setArrowPosition = (dimensions, xPos) => {
+    const rightBound = Math.min(
+      dimensions.windowWidth,
+      dimensions.width + xPos
+    );
+    const leftBound = 0;
+    const rightEdge = xPos + dimensions.width / 2;
+    const leftEdge = xPos - dimensions.width / 2;
+    const arrowSpace = ARROW_WIDTH / 2 + 5;
+
+    let centerOffset = 0;
+
+    if (leftEdge < leftBound) {
+      centerOffset = (leftEdge - leftBound) * -1 + arrowSpace;
+    } else if (rightEdge > rightBound) {
+      centerOffset = (rightEdge - rightBound) * -1 + arrowSpace;
+    }
+
+    this.setState({
+      arrowAdjustment: centerOffset
+    });
+  };
+
   /* 
    * Function that forces a re-render of the tooltip
    */
@@ -161,31 +176,13 @@ class SeatMapTooltip extends Component {
     }
   };
 
-  adjustArrow = ({ coords, position }) => {
-    const reqCenter = position.x;
-    const currentCenter = coords.x + coords.width / 2;
-
-    return reqCenter - currentCenter;
-  };
-
   updateSize = () => {
     const { isVisible } = this.props;
-
-    const {
-      windowScroll,
-      windowWidth,
-      windowHeight,
-      width,
-      height
-    } = this.dimensions;
 
     const dimensions = {};
 
     if (global.window && isVisible) {
-      const {
-        clientWidth,
-        clientHeight
-      } = global.window.document.documentElement;
+      const { innerWidth, innerHeight } = global.window;
 
       const scrollTop = Math.max(
         global.window.pageYOffset,
@@ -193,36 +190,23 @@ class SeatMapTooltip extends Component {
         global.document.body.scrollTop
       );
 
-      if (scrollTop !== windowScroll) {
-        dimensions.windowScroll = scrollTop;
-      }
-
-      if (clientWidth !== windowWidth) {
-        dimensions.windowWidth = clientWidth;
-      }
-
-      if (clientHeight !== windowHeight) {
-        dimensions.windowHeight = clientHeight;
-      }
+      dimensions.windowScroll = scrollTop;
+      dimensions.windowWidth = innerWidth;
+      dimensions.windowHeight = innerHeight;
     }
 
     if (this.myRef.current) {
+      this.myRef.current.style.top = "0px";
+      this.myRef.current.style.left = "0px";
+
       const { clientWidth, clientHeight } = this.myRef.current;
 
-      if (width !== clientWidth && clientWidth) {
-        dimensions.width = clientWidth;
-      }
-
-      if (height !== clientHeight && clientHeight) {
-        dimensions.height = clientHeight;
-      }
+      dimensions.width = clientWidth;
+      dimensions.height = clientHeight;
     }
 
     if (Object.keys(dimensions).length) {
-      this.dimensions = {
-        ...this.dimensions,
-        ...dimensions
-      };
+      this.dimensions = dimensions;
       return true;
     }
 
@@ -281,8 +265,6 @@ class SeatMapTooltip extends Component {
     const { children, isVisible, variant, ...rest } = this.props;
     const { arrowAdjustment } = this.state;
     const direction = this.getDirection();
-
-    console.log("SeatMapTooltip");
 
     return (
       <Portal>
