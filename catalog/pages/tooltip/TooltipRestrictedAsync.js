@@ -4,6 +4,7 @@ import * as PropTypes from "prop-types";
 import styled from "styled-components";
 import SeatMapTooltip from "../../../src/components/Tooltip/SeatMapTooltip";
 import { LinkCta } from "../../../src/components/Text";
+import { TRANSPARENT } from "../../../src/components/constants";
 
 const Container = styled.div`
   height: auto;
@@ -54,6 +55,18 @@ AsyncContent.defaultProps = {
   onLoad: () => {}
 };
 
+const seatMap = new Array(50).fill(1);
+const seatMapStyle = {
+  display: "inline-block",
+  width: "20px",
+  height: "20px",
+  backgroundColor: "#026CDF",
+  border: "2px solid #000",
+  borderRadius: "20px",
+  margin: "2px",
+  color: TRANSPARENT
+};
+
 class TooltipRestrictedAsyncDemo extends React.Component {
   state = {
     isOpened: false
@@ -72,7 +85,7 @@ class TooltipRestrictedAsyncDemo extends React.Component {
 
     const position = {
       x: rect.x + rect.width / 2,
-      y: rect.y
+      y: rect.y + rect.height / 2
     };
 
     this.setState(state => ({ ...state, isOpened: true, position, preferTop }));
@@ -100,7 +113,14 @@ class TooltipRestrictedAsyncDemo extends React.Component {
               Hover for Async Tooltip - Bottom (default)
             </LinkCta>
           </TooltipButton>
+        </div>
 
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between"
+          }}
+        >
           <TooltipButton>
             <LinkCta
               onMouseEnter={e => {
@@ -113,13 +133,33 @@ class TooltipRestrictedAsyncDemo extends React.Component {
           </TooltipButton>
         </div>
 
+        <br />
+        <br />
+
+        <h3>SeatMap Test</h3>
+
+        <div>
+          {seatMap.map((i, index) => (
+            <TooltipButton key={`key-${index + 2}`}>
+              <LinkCta
+                onMouseEnter={e => {
+                  this.showTooltip(e, true);
+                }}
+                onMouseLeave={this.hideTooltip}
+                style={seatMapStyle}
+              >
+                {i}
+              </LinkCta>
+            </TooltipButton>
+          ))}
+        </div>
+
         <SeatMapTooltip
           ref={this.tooltipRef}
           isVisible={isOpened}
           position={{ ...position }}
           preferTop={preferTop}
           directionChanged={this.onDirectionChanged}
-          style={{ width: "260px" }}
         >
           {isOpened ? (
             <AsyncContent onLoad={() => this.tooltipRef.current.refresh()} />

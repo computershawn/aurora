@@ -123,7 +123,7 @@ class SeatMapTooltip extends Component {
         ? bottomPosition
         : topPositionWithFallback;
 
-    this.setArrowPosition(dimensions, getXPosition());
+    this.setArrowPosition(dimensions, x);
 
     return {
       x: getXPosition(),
@@ -147,17 +147,18 @@ class SeatMapTooltip extends Component {
       dimensions.windowWidth,
       dimensions.width + xPos
     );
+
     const leftBound = 0;
     const rightEdge = xPos + dimensions.width / 2;
     const leftEdge = xPos - dimensions.width / 2;
-    const arrowSpace = ARROW_WIDTH / 2 + 5;
+    const arrowSpace = ARROW_WIDTH / 2;
 
     let centerOffset = 0;
 
     if (leftEdge < leftBound) {
-      centerOffset = (leftEdge - leftBound) * -1 + arrowSpace;
+      centerOffset = (leftEdge - leftBound) * 1 + arrowSpace;
     } else if (rightEdge > rightBound) {
-      centerOffset = (rightEdge - rightBound) * -1 + arrowSpace;
+      centerOffset = (rightEdge - rightBound) * 1 - arrowSpace;
     }
 
     this.setState({
