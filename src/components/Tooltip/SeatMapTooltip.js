@@ -32,6 +32,10 @@ class SeatMapTooltip extends Component {
     };
   }
 
+  componentDidMount() {
+    this.refresh();
+  }
+
   /*
    * If any specific value is passed via `direction` props, than that value should be used
    * If `auto` value is passed via `direction` prop, then calculated direction value will be used
@@ -52,7 +56,7 @@ class SeatMapTooltip extends Component {
       spaceFromMouse
     });
 
-    let direction = null;
+    let direction = this.props.preferTop ? TOP : BOTTOM;
 
     if (result.y < position.y + dimensions.windowScroll) {
       direction = TOP;
@@ -219,24 +223,15 @@ class SeatMapTooltip extends Component {
   };
 
   tooltipEnter = () => {
-    const {
-      isVisible,
-      position,
-      spaceFromMouse,
-      reduceTop,
-      reduceBottom
-    } = this.props;
+    const { isVisible, position, spaceFromMouse } = this.props;
 
     if (isVisible) {
-      const reduce = { top: reduceTop, bottom: reduceBottom };
-
       this.updateSize();
 
       this.pos = this.getPositionAndUpdateDirection({
         position,
         dimensions: this.dimensions,
-        spaceFromMouse,
-        reduce
+        spaceFromMouse
       });
     }
 
