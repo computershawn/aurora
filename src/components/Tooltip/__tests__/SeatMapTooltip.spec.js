@@ -225,7 +225,7 @@ describe("SeatMapTooltip", () => {
       });
     });
 
-    it("does not call callback when direction remains the same", () => {
+    it("calls callback when direction changes", () => {
       tree.getPositionAndUpdateDirection({
         position: {
           x: 500,
