@@ -113,7 +113,7 @@ export const StyledChildWrapper = styled.div`
     padding-top: 4px;
     padding-bottom: 8px;
     border-width: 1px;
-    max-height: 606px;
+    max-height: 176px;
 
     transition: max-height 0.3s ${constants.easing.easeInOutQuad},
       border-width 0s, padding-top 0s, padding-bottom 0s;

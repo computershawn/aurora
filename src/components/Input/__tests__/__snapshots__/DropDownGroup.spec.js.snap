@@ -121,7 +121,7 @@ exports[`DropDownGroup Arrow key down should open the drop down 1`] = `
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -535,7 +535,7 @@ exports[`DropDownGroup Arrow key up should open the drop down 1`] = `
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -949,7 +949,7 @@ exports[`DropDownGroup Click outside should close the dropdown 1`] = `
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -1363,7 +1363,7 @@ exports[`DropDownGroup Click outside should not close the dropdown when the isOp
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -1779,7 +1779,7 @@ exports[`DropDownGroup Effect when move moves over dropdown option  when focused
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -2193,7 +2193,7 @@ exports[`DropDownGroup Effect when move moves over dropdown option when focused 
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -2607,7 +2607,7 @@ exports[`DropDownGroup Escape key should close the drop down 1`] = `
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -3021,7 +3021,7 @@ exports[`DropDownGroup Should not focus onClick 1`] = `
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -3435,7 +3435,7 @@ exports[`DropDownGroup Should open the drop down onClick 1`] = `
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -3851,7 +3851,7 @@ exports[`DropDownGroup Space bar should select and close dropdown 1`] = `
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -4267,7 +4267,7 @@ exports[`DropDownGroup Space bar should select and not close dropdown when the i
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -4882,7 +4882,7 @@ exports[`DropDownGroup renders bordered variant with an inner label with a place
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -5300,7 +5300,7 @@ exports[`DropDownGroup renders borderless variant with an inner label with a lab
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -5716,7 +5716,7 @@ exports[`DropDownGroup renders default dropdown 1`] = `
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -6130,7 +6130,7 @@ exports[`DropDownGroup renders default dropdown that should always open downward
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -6544,7 +6544,7 @@ exports[`DropDownGroup renders input correctly when the isOpen prop with a value
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -6958,7 +6958,7 @@ exports[`DropDownGroup renders input correctly when the keywordSearch prop with 
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -7372,7 +7372,7 @@ exports[`DropDownGroup renders input correctly when the withKeyboardProvider pro
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -7785,7 +7785,7 @@ exports[`DropDownGroup renders small dropdown 1`] = `
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -8199,7 +8199,7 @@ exports[`DropDownGroup should render the correct label when label prop is passed
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -8612,7 +8612,7 @@ exports[`DropDownGroup should render the correct label when label prop is passed
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
@@ -9028,7 +9028,7 @@ exports[`DropDownGroup should render the correct label when label prop is passed
   padding-top: 4px;
   padding-bottom: 8px;
   border-width: 1px;
-  max-height: 606px;
+  max-height: 176px;
   -webkit-transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
   transition: max-height 0.3s cubic-bezier(0.455,0.03,0.515,0.955), border-width 0s,padding-top 0s,padding-bottom 0s;
 }
